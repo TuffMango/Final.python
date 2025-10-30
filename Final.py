@@ -33,21 +33,25 @@ for i in range(user_input):
 
     #DAMAGE
     #WEAK MAGIC
-    cursed_punch_damage = 0
-    quick_slice_damage = 0
+    cursed_punch_damage = ""
+    quick_slice_damage = ""
     piercing_blood_damage = 0
     dismantle_damage = 0
     mass_switch_damage = 0
     
     if weak_magic == "Cursed punch":
-      cursed_punch_damage = 3 * {attack_power}
+      cursed_punch_damage = 3 * attack_power
     if weak_magic == "quick slice":
-      quick_slice_damage = 3 * .5 * {agility}
+      quick_slice_damage = 3 * .5 * agility
     if weak_magic == "Piercing blood":
-      piercing_blood_damage = 5 * {attack_power}
+      piercing_blood_damage = 5 * attack_power
+    if weak_magic == "Dismantle":
+      dismantle_damage = 3 * agility
+    if weak_magic == "Mass switch":
+      mass_switch_damage = 50 / mana
     
     #Strong magic damage
-    cleave_damage = 0
+    cleave_damage = ""
     cero_oscuras_damage = 0
     detroit_damage =  0
     one_million_slashes_damage = 0
@@ -55,30 +59,36 @@ for i in range(user_input):
     black_flash_damage = 0
     getsuga_tensho_damage = 0
     if strong_magic == "Cleave":
-      cleave_damage = 8 *{attack_power}
+      cleave_damage = 8 *attack_power
     if strong_magic == "Cero Oscuras":
-      cero_oscuras_damage = 6 * {attack_power}
+      cero_oscuras_damage = 6 * attack_power
     if strong_magic == "Detroit":
-      detroit_damage = 6 * {attack_power}
+      detroit_damage = 6 * attack_power
     if strong_magic == "One Million Slashes":
-      one_million_slashes_damage = 6 * {attack_power}
+      one_million_slashes_damage = 6 * attack_power
     if strong_magic == "120%":
-      one_twenty_damage = .5 * {agility}
+      one_twenty_damage = .5 * agility
     if strong_magic == "Black Flash":
-      black_flash_damage = 7 * {attack_power}
+      black_flash_damage = 7 * attack_power
     if strong_magic == "Getsuga Tensho":
-      getsuga_tensho_damage = 8 * {attack_power}
+      getsuga_tensho_damage = 8 * attack_power
   
 
     #melee damage
     jab_damage = 0
     kick_damage = 0
     dropkick_damage = 0
+    if melee_move_one or melee_move_two == "Jab":
+      jab_damage = 1 * attack_power
+    if melee_move_two or melee_move_one == "Kick":
+      kick_damage = 1.5 * attack_power
+    if melee_move_one or melee_move_two == "Dropkick":
+      dropkick_damage = 2 * agility
     
 
 
     time.sleep(1.1)
-    print(f"-------{random_name}'s stats-------\n Name: {random_name} \n health: {health} \n defense: {defense} \n attack power: {attack_power} \n agility: {agility} \n mana: {mana} \n----MOVES---- \t------DAMAGE----\n{melee_move_one}\tN/A \n{melee_move_two}\tN/A\n{weak_magic}\tN/A\n{strong_magic}\tN/A")
+    print(f"-------{random_name}'s stats-------\n Name: {random_name} \n health: {health} \n defense: {defense} \n attack power: {attack_power} \n agility: {agility} \n mana: {mana} \n----MOVES---- \t------DAMAGE----\n{melee_move_one}\tN/A \n{melee_move_two}\tN/A\n{weak_magic}\t{cursed_punch_damage}{quick_slice_damage}\n{strong_magic}\t{cleave_damage}")
     
 
 
@@ -88,7 +98,7 @@ for i in range(user_input):
       print(f"--ULTIMATE MOVE--\n{ultimate}")
 
 
-
+answer = ("")
 
 if user_input == 2:
  answer = input("Do you want these characters to fight?(YOU WILL PLAY AS THE SECOND CHARACTER) Y/N: ")
