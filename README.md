@@ -7,11 +7,11 @@ This generator makes NPCs, it includes their stats like strength, power, and the
 
 HIGHLIGHTS
 
--Dynamic character naming system
--Dynamic character stat system
--random move generator
--damages of moves are based off of stats
--asks how many characters you wish to generate
+*Dynamic character naming system
+*Dynamic character stat system
+*random move generator
+*damages of moves are based off of stats
+*asks how many characters you wish to generate
 
 This software was written by Tuffmango with the purpose to put out random npcs that have a extremely extremely low chance to be the exact same. As the dynamic random system is given enough numbers, names, moves, and other variables to creat a unique character each time. The chances of the system creating the same character twice are slim to none.
 This software is also easy to  understand, it can be broken down into only a couple of lines of code (roughly 60)
