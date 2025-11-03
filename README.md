@@ -1,2 +1,10 @@
 # Final.python
-The final for python semester 1
+NPC Character Generator
+
+OVERVIEW
+
+This generator makes NPCs, it includes their stats like strength, power, and their moves, and if they are strong enough they have a ultimate move.
+
+HIGHLIGHTS
+
+

@@ -35,9 +35,9 @@ for i in range(user_input):
     #WEAK MAGIC
     cursed_punch_damage = ""
     quick_slice_damage = ""
-    piercing_blood_damage = 0
-    dismantle_damage = 0
-    mass_switch_damage = 0
+    piercing_blood_damage = ""
+    dismantle_damage = ""
+    mass_switch_damage = ""
     
     if weak_magic == "Cursed punch":
       cursed_punch_damage = 3 * attack_power
@@ -52,12 +52,12 @@ for i in range(user_input):
     
     #Strong magic damage
     cleave_damage = ""
-    cero_oscuras_damage = 0
-    detroit_damage =  0
-    one_million_slashes_damage = 0
-    one_twenty_damage = 0
-    black_flash_damage = 0
-    getsuga_tensho_damage = 0
+    cero_oscuras_damage = ""
+    detroit_damage =  ""
+    one_million_slashes_damage = ""
+    one_twenty_damage = ""
+    black_flash_damage = ""
+    getsuga_tensho_damage = ""
     if strong_magic == "Cleave":
       cleave_damage = 8 *attack_power
     if strong_magic == "Cero Oscuras":
@@ -75,9 +75,9 @@ for i in range(user_input):
   
 
     #melee damage
-    jab_damage = 0
-    kick_damage = 0
-    dropkick_damage = 0
+    jab_damage = ""
+    kick_damage = ""
+    dropkick_damage = ""
     if melee_move_one or melee_move_two == "Jab":
       jab_damage = 1 * attack_power
     if melee_move_two or melee_move_one == "Kick":
@@ -88,7 +88,7 @@ for i in range(user_input):
 
 
     time.sleep(1.1)
-    print(f"-------{random_name}'s stats-------\n Name: {random_name} \n health: {health} \n defense: {defense} \n attack power: {attack_power} \n agility: {agility} \n mana: {mana} \n----MOVES---- \t------DAMAGE----\n{melee_move_one}\tN/A \n{melee_move_two}\tN/A\n{weak_magic}\t{cursed_punch_damage}{quick_slice_damage}\n{strong_magic}\t{cleave_damage}")
+    print(f"-------{random_name}'s stats-------\n Name: {random_name} \n health: {health} \n defense: {defense} \n attack power: {attack_power} \n agility: {agility} \n mana: {mana} \n----MOVES---- \t------DAMAGE----\n{melee_move_one}\t{jab_damage}{kick_damage}{dropkick_damage} \n{melee_move_two}\t{jab_damage}{kick_damage}{dropkick_damage}\n{weak_magic}\t{cursed_punch_damage}{quick_slice_damage}{piercing_blood_damage}{dismantle_damage}{mass_switch_damage}\n{strong_magic}\t{cleave_damage}{cero_oscuras_damage}{detroit_damage}{one_million_slashes_damage}{one_twenty_damage}{black_flash_damage}{getsuga_tensho_damage}")
     
 
 
@@ -96,19 +96,3 @@ for i in range(user_input):
 
     if mana >= 90:
       print(f"--ULTIMATE MOVE--\n{ultimate}")
-
-
-answer = ("")
-
-if user_input == 2:
- answer = input("Do you want these characters to fight?(YOU WILL PLAY AS THE SECOND CHARACTER) Y/N: ")
-
-if answer == "Y" or "y" or "Yes" or "yes":
-  print(f"-------{random_name}'s stats-------\n Name: {random_name} \n health: {health} \n defense: {defense} \n attack power: {attack_power} \n agility: {agility} \n mana: {mana} \n----MOVES---- \t------DAMAGE----\n{melee_move_one}\tplaceholder\n{melee_move_two}\tplaceholder\n{weak_magic}\tplaceholder\n{strong_magic}\tplaceholder\n", print(f"--ULTIMATE MOVE--\n{ultimate}"))
-else:
-  print("okay!")
-
-
-    
-
-
