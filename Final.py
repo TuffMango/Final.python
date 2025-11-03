@@ -2,10 +2,10 @@
 #DONE:lib, float, list, function, loops, int, str, int, float,
 #NOT DONE:
 print("Welcome to this NPC generator!")
-user_input = int(input("Please enter the amount of NPCs you desire: "))
+user_input = int(input("Please enter the amount of NPCs you desire: ")) #asking the user how many npcs they want and it reads the amount asked for
 import random
 import time
-names = ["Akira", "Rin", "Ulqiorra", "Sora", "Ichi", "Haruto", "Aiko", "Renji", "Natsumi", "Kurosawa"]
+names = ["Akira", "Rin", "Ulqiorra", "Sora", "Ichi", "Haruto", "Aiko", "Renji", "Natsumi", "Kurosawa"] # lists of stuff so the npc has values for the names and moves
 melee_attacks = ["Jab", "Kick", "Dropkick"]
 weak_magic_attacks = ["Cursed punch", "quick slice", "Piercing blood", "Dismantle", "Mass switch"]
 strong_magic_attacks = ["Cleave", "Cero Oscuras", "Detroit", "One Million Slashes", "120%", "Black Flash", "Getsuga Tensho"]
@@ -17,8 +17,8 @@ ultimate_moves = ["FINAL FLASH", "ILL USE MY ALL", "1000000%", "FINAL GETSUGA TE
 
 
 
-for i in range(user_input):
-    random_name =(random.choice(names))
+for i in range(user_input): #determains the amount of npcs the users asks and runs these commands x amount of times (X = the  number the user asked for)
+    random_name =(random.choice(names)) #running random commands for the NPCs stats, like deciding  what moves or its health etc.
     health = random.randint (1 , 100)
     defense = random.randint (1, 100)
     attack_power = random.randint (1, 10)
@@ -33,13 +33,13 @@ for i in range(user_input):
 
     #DAMAGE
     #WEAK MAGIC
-    cursed_punch_damage = ""
+    cursed_punch_damage = "" #setting up variables for later use
     quick_slice_damage = ""
     piercing_blood_damage = ""
     dismantle_damage = ""
     mass_switch_damage = ""
     
-    if weak_magic == "Cursed punch":
+    if weak_magic == "Cursed punch": # making so if the move selected by the loop is this move, it will run the command under, creating a damage amount.
       cursed_punch_damage = 3 * attack_power
     if weak_magic == "quick slice":
       quick_slice_damage = 3 * .5 * agility
@@ -87,12 +87,12 @@ for i in range(user_input):
     
 
 
-    time.sleep(1.1)
+    time.sleep(1.1) #printing the states of the npc,  x amount of times.
     print(f"-------{random_name}'s stats-------\n Name: {random_name} \n health: {health} \n defense: {defense} \n attack power: {attack_power} \n agility: {agility} \n mana: {mana} \n----MOVES---- \t------DAMAGE----\n{melee_move_one}\t{jab_damage}{kick_damage}{dropkick_damage} \n{melee_move_two}\t{jab_damage}{kick_damage}{dropkick_damage}\n{weak_magic}\t{cursed_punch_damage}{quick_slice_damage}{piercing_blood_damage}{dismantle_damage}{mass_switch_damage}\n{strong_magic}\t{cleave_damage}{cero_oscuras_damage}{detroit_damage}{one_million_slashes_damage}{one_twenty_damage}{black_flash_damage}{getsuga_tensho_damage}")
     
 
 
 
 
-    if mana >= 90:
+    if mana >= 90: #makes it so if the mana is below 90, a random ultimate move isn't printed, and if it is 90 or above, the ultimate move selected is printed
       print(f"--ULTIMATE MOVE--\n{ultimate}")
